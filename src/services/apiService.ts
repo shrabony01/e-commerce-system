@@ -1,4 +1,4 @@
-import {IProductData} from "../models/Product.js";
+import type { IProductData } from "../models/Product.js";
 import {AppError} from "../utils/errorHandler.js";
 
 interface IProductsApiResponse {
