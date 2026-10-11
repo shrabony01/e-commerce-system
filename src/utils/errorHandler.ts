@@ -11,14 +11,12 @@ export class AppError extends Error{
     }
 }
 
-export function handleError(error:unknown):void {
-    if(error instanceof AppError){
-        console.error('[AppError ${error.statusCode}]: ${error.message}')
-    }
-    else if(error instanceof Error){
-        console.error(`[Standard Error]: ${error.message}`);
-
-    }else{
-        console.error("[Unknown Error]: An unexpected issue occurred.", error);
-    }
+export function handleError(error: unknown): void {
+  if (error instanceof AppError) {
+    console.error(`[AppError ${error.statusCode}]: ${error.message}`);
+  } else if (error instanceof Error) {
+    console.error(`[Standard Error]: ${error.message}`);
+  } else {
+    console.error("[Unknown Error]: An unexpected issue occurred.", error);
+  }
 }
